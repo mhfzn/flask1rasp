@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.available {
+    background-color: green;
+}
+
+.occupied {
+    background-color: red;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#footer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.blur-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    position: absolute;
+}
+
+#spots-container {
+    position: relative;
+    z-index: 2;
+}
+
+#spots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
