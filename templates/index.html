@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMAPAR V.1 - A Smart Parking System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
     <script>
         async function fetchData() {
@@ -46,25 +50,30 @@
 
 </head>
 <body onload="fetchData()">
-    <div id="header">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/id/1/16/Logo_Politeknik_Negeri_Jakarta.jpg" alt="Politeknik Negeri Jakarta Logo">
-        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5GhVIGHYkSjY1dVBGyjm2LI6sTHWoxPfW8g&s" alt="Smart Parking Logo">
-    </div>
-    <h1>SMAPAR V.1</h1>
+    <nav class="navbar navbar-expand-lg shadow-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='logopnj.png') }}" alt="PNJ" class="logo-img">
+                <img src="{{ url_for('static', filename='logocsc.png') }}" alt="CSC" class="logo-img">
+                <img src="{{ url_for('static', filename='smapar.png') }}" alt="SMAPAR" class="logo-img">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="about_us.html">About us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <h1><img src="{{ url_for('static', filename='smapar.png') }}" alt="smapar" class="smapar-logo"></h1>
     <h2>Parkir Yang Tersedia: <span id="available">0</span> / <span id="total">0</span></h2>
     <div class="container">
-        <div class="blur-background">
-            <div class="blur-box"></div>
-        </div>
         <div id="spots-container">
             <div id="spots"></div>
         </div>
-    </div>
-    <div id="footer">
-        Made By: TeamSmartpar PNJ<br>
-        - Mohammad Fauzan<br>
-        - Muhammad Fakhriansyah<br>
-        - Agung Soeltani
     </div>
 </body>
 </html>

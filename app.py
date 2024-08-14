@@ -46,7 +46,7 @@ def spots():
     })
 
 def run_flask():
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5001)
 
 if __name__ == '__main__':
     client.loop_start()  # Start the MQTT loop in a separate thread
